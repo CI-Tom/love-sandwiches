@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 # from pprint import pprint
+import json
 
 
 SCOPE = [
@@ -166,10 +167,11 @@ def main():
     stock_data = calculate_stock_data(sales_columns)
     # print(stock_data)
     update_worksheet(stock_data, "stock")
+    return stock_data
 
 
 print("Welcome to Love Sandwiches Data Automation")
 
-main()
+stock_data = main()
 
 # get_last_5_entries_sales()
