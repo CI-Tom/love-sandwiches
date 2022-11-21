@@ -155,6 +155,8 @@ def get_stock_values(data):
     
     dictionary = dict(zip(headings, data))
     return dictionary
+
+print("Make the following numbers of sandwiches for next market:")
     
 stock_values = get_stock_values(stock_data)
 print(stock_values)
